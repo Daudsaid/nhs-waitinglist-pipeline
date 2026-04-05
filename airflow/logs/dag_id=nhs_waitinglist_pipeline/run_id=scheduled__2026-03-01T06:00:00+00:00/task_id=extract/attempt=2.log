@@ -1,0 +1,44 @@
+[2026-04-05T21:45:53.037+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-04-05T21:45:53.098+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: nhs_waitinglist_pipeline.extract scheduled__2026-03-01T06:00:00+00:00 [queued]>
+[2026-04-05T21:45:53.102+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: nhs_waitinglist_pipeline.extract scheduled__2026-03-01T06:00:00+00:00 [queued]>
+[2026-04-05T21:45:53.103+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 2
+[2026-04-05T21:45:53.118+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): extract> on 2026-03-01 06:00:00+00:00
+[2026-04-05T21:45:53.127+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'nhs_waitinglist_pipeline', 'extract', 'scheduled__2026-03-01T06:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/nhs_pipeline_dag.py', '--cfg-path', '/tmp/tmpydbm3yir']
+[2026-04-05T21:45:53.131+0000] {standard_task_runner.py:91} INFO - Job 6: Subtask extract
+[2026-04-05T21:45:53.136+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=253) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-04-05T21:45:53.137+0000] {standard_task_runner.py:63} INFO - Started process 256 to run task
+[2026-04-05T21:45:53.913+0000] {task_command.py:426} INFO - Running <TaskInstance: nhs_waitinglist_pipeline.extract scheduled__2026-03-01T06:00:00+00:00 [running]> on host be5519856e31
+[2026-04-05T21:45:54.423+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='daud' AIRFLOW_CTX_DAG_ID='nhs_waitinglist_pipeline' AIRFLOW_CTX_TASK_ID='extract' AIRFLOW_CTX_EXECUTION_DATE='2026-03-01T06:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-01T06:00:00+00:00'
+[2026-04-05T21:45:54.425+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-04-05T21:45:54.509+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-04-05T21:45:54.513+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/project && python3 etl/extract/extract.py']
+[2026-04-05T21:45:54.544+0000] {subprocess.py:86} INFO - Output:
+[2026-04-05T21:45:56.654+0000] {subprocess.py:93} INFO - Fetching CSV links from NHS England...
+[2026-04-05T21:45:56.667+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2026-04-05T21:45:56.669+0000] {subprocess.py:93} INFO -   File "/opt/***/project/etl/extract/extract.py", line 63, in <module>
+[2026-04-05T21:45:56.671+0000] {subprocess.py:93} INFO -     run()
+[2026-04-05T21:45:56.671+0000] {subprocess.py:93} INFO -   File "/opt/***/project/etl/extract/extract.py", line 49, in run
+[2026-04-05T21:45:56.672+0000] {subprocess.py:93} INFO -     links = get_csv_links(NHS_AE_URL)
+[2026-04-05T21:45:56.672+0000] {subprocess.py:93} INFO -                           ^^^^^^^^^^
+[2026-04-05T21:45:56.675+0000] {subprocess.py:93} INFO - NameError: name 'NHS_AE_URL' is not defined. Did you mean: 'NHS_AE_URLS'?
+[2026-04-05T21:45:56.771+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2026-04-05T21:45:56.782+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-04-05T21:45:56.960+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-04-05T21:45:57.007+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=nhs_waitinglist_pipeline, task_id=extract, run_id=scheduled__2026-03-01T06:00:00+00:00, execution_date=20260301T060000, start_date=20260405T214553, end_date=20260405T214557
+[2026-04-05T21:45:57.107+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 6 for task extract (Bash command failed. The command returned a non-zero exit code 1.; 256)
+[2026-04-05T21:45:57.161+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2026-04-05T21:45:57.634+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-04-05T21:45:57.684+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

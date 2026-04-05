@@ -1,0 +1,46 @@
+version: 2
+
+models:
+  - name: stg_nhs_ae_attendances
+    description: "Staged NHS A&E attendance data from NHS England monthly CSVs"
+    columns:
+      - name: org_code
+        description: "Organisation code - not unique as same trust appears per month"
+        data_tests:
+          - not_null
+      - name: period
+        description: "Reporting period"
+        data_tests:
+          - not_null
+      - name: total_attendances
+        description: "Total A&E attendances across all types"
+        data_tests:
+          - not_null
+
+  - name: int_nhs_ae_by_trust
+    description: "Aggregated A&E performance metrics per trust across all months"
+    columns:
+      - name: org_code
+        description: "Organisation code"
+        data_tests:
+          - not_null
+
+  - name: mart_trust_performance
+    description: "Final trust performance mart with performance band classification"
+    columns:
+      - name: org_code
+        data_tests:
+          - not_null
+      - name: performance_band
+        data_tests:
+          - not_null
+          - accepted_values:
+              values: ['CRITICAL', 'HIGH', 'MEDIUM', 'LOW']
+
+  - name: mart_monthly_trends
+    description: "National A&E trends aggregated by month"
+    columns:
+      - name: period
+        data_tests:
+          - not_null
+          - unique

@@ -1,0 +1,84 @@
+[0m17:34:02.402723 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a2738c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b8d39d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b8d3c50>]}
+
+
+============================== 17:34:02.405261 | 7ef99075-9119-470d-a2b6-cac69b375543 ==============================
+[0m17:34:02.405261 [info ] [MainThread]: Running with dbt=1.11.6
+[0m17:34:02.405531 [debug] [MainThread]: running dbt with arguments {'indirect_selection': 'eager', 'partial_parse': 'True', 'log_path': 'logs', 'empty': 'None', 'static_parser': 'True', 'use_colors': 'True', 'cache_selected_only': 'False', 'no_print': 'None', 'write_json': 'True', 'invocation_command': 'dbt init nhs_waiting_dbt', 'log_cache_events': 'False', 'use_experimental_parser': 'False', 'target_path': 'None', 'printer_width': '80', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'version_check': 'True', 'quiet': 'False', 'introspect': 'True', 'profiles_dir': '/Users/daudsaid/.dbt', 'debug': 'False', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False'}
+[0m17:34:02.414359 [info ] [MainThread]: A project called nhs_waiting_dbt already exists here.
+[0m17:34:02.449117 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 0.080147415, "process_in_blocks": "0", "process_kernel_time": 0.126027, "process_mem_max_rss": "110018560", "process_out_blocks": "0", "process_user_time": 0.545206}
+[0m17:34:02.449458 [debug] [MainThread]: Command `dbt init` succeeded at 17:34:02.449404 after 0.08 seconds
+[0m17:34:02.449626 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b9482b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b9c43b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b717bd0>]}
+[0m17:34:02.449796 [debug] [MainThread]: Flushing usage events
+[0m17:34:02.914663 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:35:11.179152 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c9738c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dfcf9d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dfcfc50>]}
+
+
+============================== 17:35:11.182331 | 60838ce8-b4ed-48be-80f9-c3c12967aba1 ==============================
+[0m17:35:11.182331 [info ] [MainThread]: Running with dbt=1.11.6
+[0m17:35:11.182640 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'log_cache_events': 'False', 'use_colors': 'True', 'printer_width': '80', 'empty': 'None', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'log_path': 'logs', 'invocation_command': 'dbt init nhs_waiting_dbt', 'quiet': 'False', 'debug': 'False', 'log_format': 'default', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'write_json': 'True', 'warn_error': 'None', 'use_experimental_parser': 'False', 'target_path': 'None', 'profiles_dir': '/Users/daudsaid/.dbt', 'fail_fast': 'False', 'no_print': 'None', 'static_parser': 'True', 'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m17:35:11.190845 [info ] [MainThread]: A project called nhs_waiting_dbt already exists here.
+[0m17:35:11.192738 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 0.044987, "process_in_blocks": "0", "process_kernel_time": 0.112065, "process_mem_max_rss": "112590848", "process_out_blocks": "0", "process_user_time": 0.533984}
+[0m17:35:11.192968 [debug] [MainThread]: Command `dbt init` succeeded at 17:35:11.192922 after 0.05 seconds
+[0m17:35:11.193117 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e0482b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e0c43b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10de17bd0>]}
+[0m17:35:11.193258 [debug] [MainThread]: Flushing usage events
+[0m17:35:11.644058 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:35:34.894296 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c5d78c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dc379d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dc37c50>]}
+
+
+============================== 17:35:34.896756 | 5380b857-7034-42d4-8b72-6f3189924a49 ==============================
+[0m17:35:34.896756 [info ] [MainThread]: Running with dbt=1.11.6
+[0m17:35:34.897034 [debug] [MainThread]: running dbt with arguments {'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'log_format': 'default', 'no_print': 'None', 'static_parser': 'True', 'use_colors': 'True', 'log_cache_events': 'False', 'invocation_command': 'dbt init nhs_waiting_dbt', 'write_json': 'True', 'introspect': 'True', 'log_path': 'logs', 'warn_error': 'None', 'printer_width': '80', 'fail_fast': 'False', 'profiles_dir': '/Users/daudsaid/.dbt', 'version_check': 'True', 'debug': 'False', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_experimental_parser': 'False', 'empty': 'None', 'partial_parse': 'True', 'cache_selected_only': 'False', 'target_path': 'None'}
+[0m17:35:34.904847 [debug] [MainThread]: Starter project path: /Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/dbt/include/starter_project
+[0m17:35:34.908723 [info ] [MainThread]: 
+Your new dbt project "nhs_waiting_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m17:35:34.908935 [info ] [MainThread]: Setting up your profile.
+[0m17:35:38.647100 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m17:35:38.647357 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m17:35:38.647490 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m17:37:08.099700 [info ] [MainThread]: Profile nhs_waiting_dbt written to /Users/daudsaid/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m17:37:08.113189 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 93.24525, "process_in_blocks": "0", "process_kernel_time": 0.242376, "process_mem_max_rss": "200425472", "process_out_blocks": "0", "process_user_time": 0.868674}
+[0m17:37:08.116143 [debug] [MainThread]: Command `dbt init` succeeded at 17:37:08.116008 after 93.25 seconds
+[0m17:37:08.117024 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x114a808a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c0b83b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x114a546b0>]}
+[0m17:37:08.117624 [debug] [MainThread]: Flushing usage events
+[0m17:37:08.590531 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:37:30.609626 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107cdb8c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10933b9d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10933bc50>]}
+
+
+============================== 17:37:30.612316 | 41fc23e4-c559-4b08-ab99-0369b2ea9cc2 ==============================
+[0m17:37:30.612316 [info ] [MainThread]: Running with dbt=1.11.6
+[0m17:37:30.612588 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'target_path': 'None', 'profiles_dir': '/Users/daudsaid/.dbt', 'no_print': 'None', 'invocation_command': 'dbt debug', 'write_json': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'use_colors': 'True', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'cache_selected_only': 'False', 'empty': 'None', 'indirect_selection': 'eager', 'log_format': 'default', 'quiet': 'False', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'log_path': 'logs', 'fail_fast': 'False', 'use_experimental_parser': 'False', 'log_cache_events': 'False'}
+[0m17:37:30.621224 [info ] [MainThread]: dbt version: 1.11.6
+[0m17:37:30.621394 [info ] [MainThread]: python version: 3.13.5
+[0m17:37:30.621506 [info ] [MainThread]: python path: /Library/Frameworks/Python.framework/Versions/3.13/bin/python3.13
+[0m17:37:30.621618 [info ] [MainThread]: os info: macOS-26.4-arm64-arm-64bit-Mach-O
+[0m17:37:31.568536 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m17:37:31.568794 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m17:37:31.568919 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m17:37:31.901739 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m17:37:31.901983 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m17:37:31.902112 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m17:37:32.044619 [info ] [MainThread]: Using profiles dir at /Users/daudsaid/.dbt
+[0m17:37:32.044852 [info ] [MainThread]: Using profiles.yml file at /Users/daudsaid/.dbt/profiles.yml
+[0m17:37:32.044982 [info ] [MainThread]: Using dbt_project.yml file at /Users/daudsaid/Desktop/de-daud/nhs-waitinglist-pipeline/dbt/dbt_project.yml
+[0m17:37:32.045135 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m17:37:32.048220 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 1.4696838, "process_in_blocks": "0", "process_kernel_time": 0.241023, "process_mem_max_rss": "253050880", "process_out_blocks": "0", "process_user_time": 1.168693}
+[0m17:37:32.048515 [debug] [MainThread]: Command `dbt debug` failed at 17:37:32.048475 after 1.47 seconds
+[0m17:37:32.048661 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110bb90f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1188ee570>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1191df350>]}
+[0m17:37:32.048817 [debug] [MainThread]: Flushing usage events
+[0m17:37:32.484398 [debug] [MainThread]: An error was encountered while trying to flush usage events
