@@ -26,6 +26,7 @@ staged as (
         total_emergency_admissions
     from source
     where org_code is not null
+    and lower(trim(org_name)) not like 'total%'
 )
 
 select * from staged
