@@ -25,6 +25,19 @@ NHS England (CSV) → Python Extract → PySpark Transform → Snowflake → dbt
 - **Granularity:** Provider level (NHS Trusts and Foundation Trusts)
 - **Rows:** 11,986 across 59 monthly files
 
+## Insights
+
+![NHS A&E Breach Rate Trend 2021-2026](assets/breach_rate_trend.png)
+*National A&E breach rate rose from 20% in 2021 to over 27% by 2022 and has remained elevated — visible across 5 years of pipeline data.*
+
+![Critical Performing Trusts](assets/critical_trusts.png)
+*Trusts classified as CRITICAL by the dbt mart_trust_performance model — breach rates consistently above 40%.*
+
+![Data Scale](assets/data_scale.png)
+*11,986 rows across 232 NHS trusts and 64 reporting periods ingested, transformed and loaded into Snowflake.*
+
+
+
 ## Pipeline
 
 ### Extract
