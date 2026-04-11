@@ -9,7 +9,7 @@ default_args = {
 }
 
 PROJECT_DIR = '/opt/airflow/project'
-DBT_DIR = f'{PROJECT_DIR}/dbt/nhs_waiting_dbt'
+DBT_DIR = f'{PROJECT_DIR}/nhs_waiting_dbt'
 
 with DAG(
     dag_id='nhs_waitinglist_pipeline',

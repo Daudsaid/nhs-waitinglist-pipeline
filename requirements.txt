@@ -1,0 +1,8 @@
+requests==2.32.5
+beautifulsoup4==4.12.3
+pandas==2.2.3
+pyspark==3.5.1
+snowflake-connector-python==4.4.0
+python-dotenv==1.2.2
+dbt-snowflake==1.11.3
+apache-airflow==2.9.1

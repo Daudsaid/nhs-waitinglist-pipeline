@@ -21,20 +21,20 @@ NHS England (CSV) → Python Extract → PySpark Transform → Snowflake → dbt
 ## Dataset
 
 - **Source:** NHS England A&E Attendances and Emergency Admissions
-- **Coverage:** April 2025 – February 2026 (11 months)
+- **Coverage:** April 2021 – February 2026 (5 years)
 - **Granularity:** Provider level (NHS Trusts and Foundation Trusts)
-- **Rows:** 2,197 across all months
+- **Rows:** 11,986 across 59 monthly files
 
 ## Pipeline
 
 ### Extract
-Scrapes the NHS England statistics page and downloads all monthly A&E CSV files programmatically.
+Scrapes 5 years of NHS England statistics pages and downloads all monthly A&E CSV files programmatically. Skips files already downloaded to avoid duplication.
 
 ### Transform
-PySpark job that loads all monthly CSVs into a single DataFrame, standardises column names to snake_case, removes null rows, and adds derived metrics including total attendances, total 4hr breaches, breach rate percentage, and total emergency admissions. Output saved as Parquet.
+PySpark job that loads all monthly CSVs into a single unified DataFrame, standardises column names to snake_case, removes null rows, and adds derived metrics including total attendances, total 4hr breaches, breach rate percentage, and total emergency admissions. Output saved as Parquet.
 
 ### Load
-Loads processed Parquet data into Snowflake, creating the database and schema if they don't exist.
+Loads processed Parquet data into Snowflake, creating the database and schema if they don't exist. Handles numpy type conversion and NaN to NULL mapping before insert.
 
 ## dbt Models
 
@@ -70,12 +70,11 @@ nhs-waitinglist-pipeline/
 │   ├── extract/extract.py
 │   ├── transform/transform.py
 │   └── load/load_to_snowflake.py
-├── dbt/
-│   └── nhs_waiting_dbt/
-│       └── models/
-│           ├── staging/
-│           ├── intermediate/
-│           └── marts/
+├── nhs_waiting_dbt/
+│   └── models/
+│       ├── staging/
+│       ├── intermediate/
+│       └── marts/
 ├── airflow/
 │   └── dags/nhs_pipeline_dag.py
 ├── data/
@@ -115,7 +114,7 @@ SNOWFLAKE_ROLE=ACCOUNTADMIN
 python3 etl/extract/extract.py
 python3 etl/transform/transform.py
 python3 etl/load/load_to_snowflake.py
-cd dbt/nhs_waiting_dbt && dbt run && dbt test
+cd nhs_waiting_dbt && dbt run && dbt test
 ```
 
 ### Start Airflow
